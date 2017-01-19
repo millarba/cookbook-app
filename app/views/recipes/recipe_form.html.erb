@@ -1,0 +1,18 @@
+<%= form_tag '/recipe_form', method: :post do %>
+  <div>
+    Title: <input type="text", name="title">
+  </div>
+
+  <div>
+      Chef: <input type="text", name="chef">
+  </div>
+
+  <div>
+  Ingredients: <input type="text", name="ingredients">
+  </div>
+
+  <div>
+    Directions: <input type="text", name="directions">
+  </div>
+  <input type="submit", value="Make New Recipe">
+<% end %>
