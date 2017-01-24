@@ -1,0 +1,27 @@
+<h1>Update Recipe</h1>
+
+<%= form_tag "/recipes/#{@recipe.id}", method: :patch do %>
+  <div>
+    <%= label_tag :title %>
+    <%= text_field_tag :title, @recipe.title, placeholder: "Title" %>
+    <!-- The below also works for the same thing -->
+    <!-- Title: <input type="text", name="title", value="<%= @recipe.title %>"> -->
+  </div>
+
+  <div>
+    <%= label_tag :chef %>
+    <%= text_field_tag :chef, @recipe.chef %>
+  </div>
+
+  <div>
+    <%= label_tag :ingredients %>
+    <%= text_field_tag :ingredients, @recipe.ingredients, placeholder: "Ingredients" %>
+  </div>
+
+    <div>
+    <%= label_tag :directions %>
+    <%= text_field_tag :directions, @recipe.directions, placeholder: "Directions" %>
+  </div>
+  <%= submit_tag "Update Recipe" %>
+  <!-- <input type="submit", value="Update recipe"> -->
+<% end %>

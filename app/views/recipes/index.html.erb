@@ -1,0 +1,15 @@
+<% @recipes.each_slice(3) do |recipe_slice| %>
+  <div class="row">
+    <% recipe_slice.each do |recipe| %>
+      <div class="col-md-4">
+        <div class="well">
+          <h2>Recipe: <a href="/recipes/<%= recipe.id %>"><%= recipe.title %></a></h2>
+          <h4>Chef: <%= recipe.chef %></h4>
+          <h3>Ingredients: <%= recipe.ingredients %></h3>
+          <h3>Directions: <%= recipe.directions %></h3>
+          <br>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

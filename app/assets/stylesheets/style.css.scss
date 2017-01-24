@@ -1,9 +1,18 @@
- $main-color: green;
+ $main-color: black;
 
 h1 { 
   color: $main-color;
  }
 
-h3 {
-  background-color: $main-color;
+// h3 {
+//   background-color: $main-color;
+// }
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-image: url("seigaiha.png")
+}
+
+.well img {
+  width: 100%;
 }
