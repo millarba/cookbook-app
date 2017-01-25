@@ -18,7 +18,7 @@ class Recipe < ApplicationRecord
     time_message = ""
     time_message += "#{hours} Hours" if hours > 0
     time_message += ", " if hours > 0 && minutes > 0
-    time_message += "#{minutes} #{"Minute".pluralize(minutes)}" if minutes > 0
+    time_message += "#{minutes} #{"Minutem".pluralize(minutes)}" if minutes > 0
     time_message
   end
 end
