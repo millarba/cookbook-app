@@ -39,7 +39,8 @@ class RecipesController < ApplicationController
   def create
     recipe = Recipe.new(
                           title: params[:title],
-                          chef: params[:chef],
+                          user_id: current_user.id,
+                          prep_time: params[:prep_time],
                           ingredients: params[:ingredients],
                           directions: params[:directions]
                           )
@@ -60,7 +61,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
 
     @recipe.title = params[:title]
-    @recipe.chef = params[:chef]
+    @recipe.user_id = current_user.id
     @recipe.ingredients = params[:ingredients]
     @recipe.directions = params[:directions]
 
